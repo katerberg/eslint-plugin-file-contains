@@ -1,0 +1,52 @@
+{
+  "name": "eslint-every-file-imports",
+  "version": "1.0.0",
+  "description": "ESLint rule for enforcing a string appears in multiple files as expected.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "folder",
+    "path",
+    "file",
+    "filename",
+    "glob-matching"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katerberg/eslint-every-file-imports.git"
+  },
+  "author": "Mark Katerberg <katerberg@fastmail.fm> (https://katerberg.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katerberg/eslint-every-file-imports/issues"
+  },
+  "homepage": "https://github.com/katerberg/eslint-every-file-imports",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "mocha tests --recursive"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-jsdoc": "^39.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "mocha": "^10.1.0"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.28.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "micromatch": "^4.0.5"
+  }
+}

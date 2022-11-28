@@ -28,9 +28,14 @@ ruleTester.run('every-file-imports', rule, {
       options: [{ '**/*.test.js': 'foo' }],
     }),
     testWithDefaults({
-      code: "var blah = require('foo')",
+      code: "var blah = require('foo'); var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",
       filename: 'src/components/DisplayLabel/__tests__/displayLabel.test.js',
       options: [{ '**/*.test.js': 'foo' }],
+    }),
+    testWithDefaults({
+      code: "import {blah} from 'some-path'; var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",
+      filename: 'src/components/DisplayLabel/__tests__/displayLabel.test.js',
+      options: [{ '**/*.test.js': 'some-path' }],
     }),
     testWithDefaults({
       code: "import blah from 'foo'; var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",

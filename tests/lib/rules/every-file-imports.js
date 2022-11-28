@@ -58,6 +58,27 @@ ruleTester.run('every-file-imports', rule, {
     testWithDefaults({
       code: "import blah from 'foo'; var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",
       filename: 'src/components/DisplayLabel/__tests__/displayLabel.test.js',
+      options: [{}],
+      errors: [
+        {
+          message: 'No rules provided.',
+        },
+      ],
+    }),
+    testWithDefaults({
+      code: "import blah from 'foo'; var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",
+      filename: 'src/components/DisplayLabel/__tests__/displayLabel.test.js',
+      options: [{ 'a value': 'anything' }],
+      errors: [
+        {
+          message:
+            'There is an invalid pattern in "a value", please correct it.',
+        },
+      ],
+    }),
+    testWithDefaults({
+      code: "import blah from 'foo'; var foo = 1; expect(foo).toEqual(0); expect(1).toBe(1);",
+      filename: 'src/components/DisplayLabel/__tests__/displayLabel.test.js',
       options: [{ '**/*.test.js': 'food' }],
       errors: [
         {

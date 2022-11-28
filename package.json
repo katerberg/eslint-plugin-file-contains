@@ -47,6 +47,7 @@
     "lib"
   ],
   "dependencies": {
+    "is-glob": "^4.0.3",
     "micromatch": "^4.0.5"
   }
 }

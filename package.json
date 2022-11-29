@@ -1,5 +1,5 @@
 {
-  "name": "eslint-every-file-imports",
+  "name": "eslint-plugin-file-contains",
   "version": "1.0.0",
   "description": "ESLint rule for enforcing a string appears in multiple files as expected.",
   "keywords": [
@@ -14,14 +14,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/katerberg/eslint-every-file-imports.git"
+    "url": "git+https://github.com/katerberg/eslint-plugin-file-contains.git"
   },
   "author": "Mark Katerberg <katerberg@fastmail.fm> (https://katerberg.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/katerberg/eslint-every-file-imports/issues"
+    "url": "https://github.com/katerberg/eslint-plugin-file-contains/issues"
   },
-  "homepage": "https://github.com/katerberg/eslint-every-file-imports",
+  "homepage": "https://github.com/katerberg/eslint-plugin-file-contains",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
@@ -48,6 +48,7 @@
   ],
   "dependencies": {
     "is-glob": "^4.0.3",
-    "micromatch": "^4.0.5"
+    "micromatch": "^4.0.5",
+    "requireindex": "^1.2.0"
   }
 }

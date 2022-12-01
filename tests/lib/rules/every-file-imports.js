@@ -98,5 +98,16 @@ ruleTester.run('every-file-imports', rule, {
         },
       ],
     }),
+    testWithDefaults({
+      code: "import blah from './foo'; var foo = 1;",
+      filename: 'src/components/DisplayLabel/__tests__/displayLabel.js',
+      options: [{ '**/*': 'foo' }],
+      errors: [
+        {
+          message:
+            'src/components/DisplayLabel/__tests__/displayLabel.js is missing import from "foo".',
+        },
+      ],
+    }),
   ],
 });
